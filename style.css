@@ -9,15 +9,6 @@ font-family: 'Spartan', sans-serif; */
   box-sizing: border-box;
 }
 
-:root {
-  --bright-blue: #3a79ff;
-  --blue: #5e81fe;
-  --grey: #8d96bd;
-  --white: #fff;
-  --dark-grey: #697ca6;
-  --san-marino: #3d4f9f;
-}
-
 /* Remove default padding */
 
 ul,
@@ -139,6 +130,7 @@ button {
 :root {
   --dark: #121212;
   --white: #fff;
+  --blue: #4dbce7;
 }
 
 /* Common styles */
@@ -157,12 +149,39 @@ body {
 .container {
   max-width: 1110px;
   margin: 0 auto;
-  width: 100%;
+  width: 96%;
 }
 
 main {
-  display: flex;
   flex: 1;
+}
+
+/* Top-bar styles */
+
+.top-bar {
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 11px;
+  padding: 6px 0;
+}
+
+.top-bar__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-bar__connect {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar__connect-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.top-bar__connect-icon {
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 /* Header styles */
@@ -176,13 +195,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 41px 0 25px 0;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 36px;
+  padding: 25px 0;
 }
 
 .header__nav {
@@ -190,45 +203,95 @@ main {
   font-size: 14px;
 }
 
-.header__nav-item:not(:last-of-type) {
+.header__nav-item:not(:last-child) {
   margin-right: 32px;
 }
 
-.header__nav-link:hover,
-.admin__link:hover {
+.header__nav-link:hover {
   border-bottom: 1px solid #000;
 }
 
 .header__nav-link:active {
-  color: #4dbce7;
-  border-bottom: 1px solid #4dbce7;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
 }
 
-.admin {
+.header__nav-link--active {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Customer-action styles */
+
+.customer-actions {
   display: flex;
 }
 
-.admin__item:not(:last-of-type) {
+.customer-actions__item {
+  line-height: 0;
+}
+
+.customer-actions__item:not(:last-child) {
   margin-right: 24px;
 }
 
-.admin__icon {
+.customer-actions__icon {
   stroke: #121212;
 }
 
-.admin__link:active {
-  border-bottom: 1px solid #4dbce7;
+.customer-actions__icon--active {
+  stroke: var(--blue);
 }
 
-.admin__link:active .admin__icon {
-  stroke: #4dbce7;
+.customer-actions__link:hover .customer-actions__icon {
+  stroke: var(--blue);
+}
+
+.customer-actions__link {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+
+.customer-actions__link:active {
+  border-color: var(--blue);
+}
+
+.customer-actions__link:active .customer-actions__icon {
+  stroke: var(--blue);
+}
+
+/* Socials styles */
+
+.socials {
+  display: flex;
+}
+
+.socials__item {
+  line-height: 0;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.socials__link {
+  display: inline-block;
+  min-height: 18px;
+}
+
+.socials__icon {
+  fill: #d0d0d0;
+}
+
+.socials__icon:hover {
+  fill: #eeeded;
+}
+
+.socials__icon:active {
+  fill: var(--white);
 }
 
 /* Footer styles */
-
-.footer {
-  max-height: 56px;
-}
 
 .footer__start {
   background-color: var(--dark);
@@ -255,7 +318,6 @@ main {
   width: 100%;
   max-height: 32px;
   height: 100%;
-  align-items: baseline;
 }
 
 .footer__input {
@@ -266,7 +328,7 @@ main {
   border: none;
   font-size: 13px;
   font-weight: 500;
-  padding: 7px 0 7px 16px;
+  padding: 7px 16px;
 }
 
 .footer__input::placeholder {
@@ -294,24 +356,8 @@ main {
   border-width: 2px;
 }
 
-.socials {
-  display: flex;
-}
-
-.socials__item:not(:last-of-type) {
-  margin-right: 12px;
-}
-
-.socials__icon {
-  fill: #d0d0d0;
-}
-
-.socials__icon:hover {
-  fill: #eeeded;
-}
-
-.socials__icon:active {
-  fill: var(--white);
+.footer__middle {
+  background-color: var(--white);
 }
 
 .footer__middle-container {
@@ -344,8 +390,8 @@ main {
 }
 
 .footer__nav-link:active {
-  color: #4dbce7;
-  border-bottom: 1px solid #4dbce7;
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
 }
 
 .footer__end {
@@ -363,7 +409,7 @@ main {
   display: flex;
 }
 
-.footer__end-payment-item:not(:last-of-type) {
+.footer__end-payment-item:not(:last-child) {
   margin-right: 11px;
 }
 
@@ -376,7 +422,7 @@ main {
 }
 
 .footer__end-link:hover {
-  color: #4dbce7;
+  color: var(--blue);
 }
 
 .footer__end-link:active {
