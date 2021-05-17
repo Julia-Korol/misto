@@ -377,7 +377,7 @@ main {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  padding: 32px 0;
+  padding: 32px 0 45px 0;
 }
 
 .info__item {
@@ -400,7 +400,7 @@ main {
 /* Woman styles */
 
 .products {
-  padding: 96px 0;
+  padding: 45px 0;
 }
 
 .products__heading-container {
@@ -531,6 +531,68 @@ main {
 .see-all:active {
   background-color: #eeeded;
   border: 1px solid #a8a8a8;
+}
+
+/* Proposals styles */
+
+.proposals {
+  padding: 45px 0;
+}
+
+.proposals__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  min-height: 260px;
+}
+
+.proposals__card {
+  display: grid;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(240, 239, 239);
+  justify-items: center;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.proposals__card-start {
+  background-image: url('/images/proposals/1.jpg');
+}
+
+.proposals__card-end {
+  background-image: url('/images/proposals/2.jpg');
+}
+
+.proposals__card:hover .proposals__card-name {
+  background-color: var(--blue);
+}
+
+.proposals__card:active .proposals__card-name {
+  background-color: var(--blue);
+}
+
+.proposals__card:active {
+  border: 1px solid var(--dark);
+}
+
+.proposals__card-name {
+  background-color: var(--white);
+  padding: 16px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.proposals__card-subtitle {
+  margin-bottom: 8px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.proposals__card-title-attention {
+  color: #e91e63;
 }
 
 /* Footer styles */
