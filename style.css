@@ -591,8 +591,99 @@ main {
   opacity: 0.6;
 }
 
-.proposals__card-title-attention {
+.attention {
   color: #e91e63;
+}
+
+/* Subscribing styles */
+
+.subscribing {
+  background-color: #dcdbdb;
+  background: linear-gradient(180deg, #f3f2f2 0%, #dcdbdb 100%);
+  padding: 60px 0;
+}
+
+.supscribing__info {
+  background-color: var(--white);
+  padding: 80px 96px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  max-width: 532px;
+  margin: 0 auto;
+}
+
+.supscribing__info::before {
+  content: '';
+  background-image: url('./images/subscribing/Woman.png');
+  position: absolute;
+  width: 311px;
+  height: 584px;
+  top: -4%;
+  left: -49%;
+}
+
+.supscribing__info::after {
+  content: '';
+  background-image: url('./images/subscribing/Men.png');
+  position: absolute;
+  width: 219px;
+  height: 524px;
+  top: -2%;
+  right: -38%;
+}
+
+.subscribing__info-container {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.subscribing__subtitle {
+  font-size: 12px;
+  opacity: 0.4;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.subscribing__title {
+  font-size: 26px;
+  letter-spacing: 0.1em;
+  margin-bottom: 32px;
+}
+
+.subscribing__input {
+  padding: 22px 100px;
+  background-color: #f8f8f8;
+  border: 1px solid transparent;
+  margin-bottom: 24px;
+  text-transform: none;
+}
+
+.subscribing__input::placeholder {
+  font-size: 16px;
+  color: var(--dark);
+  opacity: 0.4;
+}
+
+.subscribing__button {
+  padding: 23px 119px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--dark);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.subscribing__button:hover {
+  background-color: var(--white);
+  color: var(--dark);
+  border: 1px solid var(--dark);
+}
+
+.subscribing__button:active {
+  color: var(--blue);
 }
 
 /* Footer styles */
